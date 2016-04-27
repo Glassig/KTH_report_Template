@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{kth-mag}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish,english]{babel}
+\usepackage{modifications}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+% package for bibliography
+\usepackage{natbib}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\title{Usability of Text and Speech as Input Methods for Natural Language Interfaces}
+\foreigntitle{Användbarhet av Text och Tal som Inmatningsmetoder för Naturligt Språkgränssnitt}
+
+\author{Angelina von Gegerfelt\\Kashmir Klingestedt}
+\date{\today}
+\selectlanguage{swedish}
+\blurb{Degree Project in Computer Science, DD143X\\Supervisor: Arvind Kumar\\Examiner: Örjan Ekeberg}
+\trita{Stockholm, Sweden \today}
+
+
+\begin{document}
+
+\frontmatter
+\pagestyle{empty}
+\removepagenumbers
+\maketitle
+\selectlanguage{english}
+
+\begin{abstract}
+\input{texts/eng_abstract} %includes the english abstract
+\end{abstract}
+
+\begin{foreignabstract}{swedish}
+\input{texts/swe_abstract} %includes the swedish abstract
+\end{foreignabstract}
+\newpage
+
+\selectlanguage{english}
+\tableofcontents*
+\mainmatter
+\pagestyle{newchap}
+
+\chapter{Introduction}
+\input{texts/1.introduction}
+
+\chapter{Background}
+\input{texts/2.background}
+
+\chapter{Method}
+\input{texts/3.method}
+
+\chapter{Results}
+\input{texts/4.results}
+
+\chapter{Discussion}
+\input{texts/5.discussion}
+
+\chapter{Conclusion}
+\input{texts/6.conclusion}
+
+\newpage
+%\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{apalike}
+\bibliography{references} % expects file "references.bib"
+
+\selectlanguage{english}
+\appendix
+%\addcontentsline{toc}{chapter}{Appendix}
+\chapter{Appendix}
+\section{Questionnaires}\label{appA}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[keepaspectratio, scale = 0.8]{images/sus_quest.jpg}
+	\caption{\small{Questions used in the System Usability Scale}}\label{Quest}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[keepaspectratio, scale = 0.8]{images/user_data_1.png}
+	\caption{\small{Part 1 of the questionnaire used to gather user data}}\label{fig:ud_1}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[keepaspectratio, scale = 0.8]{images/user_data_2.png}
+	\caption{\small{Part 2 of the questionnaire used to gather user data}}\label{fig:ud_2}
+\end{figure}
+
+\end{document}
